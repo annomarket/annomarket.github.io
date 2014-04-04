@@ -1,49 +1,70 @@
 <html>
 <head>
+<style>
+.date {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.commit {
+	border-bottom-style: solid;
+	border-bottom-color: lightgrey;
+	border-bottom-width: 1px;
+	padding:0em 0em 0.3em 0em;
+	margin: 0em 0em 1em 0em;
+	list-style: none;
+}
+</style>
 </head>
 <body>
 	<h1>Change log</h1>
 	<ul>
-		<li><b>05.02.2014</b><br />
-			<p>Improved monitoring of the worker nodes</p>
-		</li>
-		<li><b>24.03.2014</b><br />
-			<p>Updated AWS SDK version</p>
-		</li>
-		<li><b>14.03.2014</b><br />
-			<p>Fixed lost result messages due to using misconfigured
-				ConnectionManager</p>
-			<p>Unzipping with Java library causes errors because it does not
-				preserve original file permissions</p>
-			<p>Trying to return an error message to the user when there is an
-				invalid task in the system</p>
-			<p>Fixed bug on the frontend resulting in clients waiting more
-				than necessary</p>
-		</li>
-		<li><b>05.03.2014</b><br />
-			<p>Added usage limiting</p>
-			<p>Fixed output format for error messages</p>
-			<p>Logging additional information about user requests</p>
-		</li>
-		<li><b>05.03.2014</b><br />
-			<p>Added usage limiting</p>
-			<p>Support for expiring keys for use in the Web client</p>
-			<p>Fixed incomplience with SpringSecuity contract</p>
-		</li>
-		<li><b>21.02.2014</b><br />
-			<p>Added usage limiting</p>
-			<p>Support for expiring keys for use in the Web client</p>
-			<p>Fixed incomplience with SpringSecuity contract</p>
-		</li>
-		<li><b>19.02.2014</b><br />
-			<p>Fixed documentation URL</p>
-		</li>
-		<li><b>05.02.2014</b><br />
-			<p>Improved calculation of result callback url</p>
-			<p>Fixed Status 500 when no annotations are returned for JSON
-				output format</p>
-			<p>More efficient pipeline initialization</p>
-		</li>
+		<li class="commit"><span class="date">28.03.2014</span>
+			<ul>
+				<li>Improved monitoring of the worker nodes leading to better price calculation</li>
+			</ul></li>
+		
+		<li class="commit"><span class="date">14.03.2014</span>
+			<ul>
+
+				<li class="entry">Fixed lost result messages due to using
+					misconfigured ConnectionManager prevents user from receiving Timeout messages</li>
+				<li class="entry">Unzipping with Java library causes errors
+					because it does not preserve original file permissions. This bug appeared to the user as Timeout errors for some pipelines</li>
+				<li class="entry">Fixed bug on the frontend resulting in
+					clients waiting more than necessary</li>
+			</ul></li>
+
+
+		<li class="commit"><span class="date">05.03.2014</span>
+			<ul>
+				<li class="entry">Added usage limiting</li>
+				<li class="entry">Fixed output format for error messages.</li>
+				<li class="entry">Logging additional information about user requests leading to better price calculation</li>
+			</ul></li>
+
+
+		<li class="commit"><span class="date">21.02.2014</span>
+			<ul>
+				<li class="entry">Support for expiring keys for use in the Web
+					client leads to improved security of the user credentials</li>
+			</ul></li>
+
+
+		<li class="commit"><span class="date">19.02.2014</span>
+			<ul>
+				<li class="entry">Fixed broken documentation URL</li>
+			</ul></li>
+
+
+		<li class="commit"><span class="date">05.02.2014</span>
+			<ul>
+				<li class="entry">Fixed Status 500 when no annotations are
+					produced and JSON output format is requested</li>
 	</ul>
+	</li>
+
+	</ul>
+
 </body>
 </html>
